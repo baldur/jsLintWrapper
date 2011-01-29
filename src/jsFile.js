@@ -48,7 +48,7 @@ var jsFile = function( path ) {
         ignore : function() {
             if( typeof SETTINGS === "undefined" ) {
             }
-            return SETTINGS[ 'ignore' ][ self.getPath() ];
+            return SETTINGS.ignore[ self.getPath() ];
         },
         getPath : function() {
             return filePath;
@@ -69,8 +69,7 @@ var jsFile = function( path ) {
                 for ( var i = 0; i < e.length; i++ ) {
                         w = e[i];
 
-                        if ( !SETTINGS[ 'okErrors' ][ w.reason ] && 
-                                !/is better written in dot notation/.test(w.reason) ) {
+                        if ( !SETTINGS.okErrors[ w.reason ] ) {
                                 found++;
                                 message += "\n\tREASON:" + w.reason     + "\n";
                                 message += "\t\t" + "\n" + w.evidence + "\n";

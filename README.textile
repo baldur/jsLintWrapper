@@ -29,3 +29,12 @@ modularized further into the development of this tool.
 
 Any help or ideas are super welcome and appreciated.
 
+h2. Tested on?
+
+I only have two machines that I test on mac and ubuntu netbook ... works on both with no problems. I am running java 1.6.x so presumably it might just work on any machine but then again I have run into problems on two different macs running the same version of java so I wouldn't be surprized if things got busted. If you have errors please notify me and I would be delighted to hear what solved it or I could help you troubleshoot. baldur.gudbjornsson@gmail.com
+
+h2. Tips and Troubleshooting
+
+sometimes it might be good to clear out your tmp/cache folder just to make sure 
+that there aren't files lurking around in error etc
+

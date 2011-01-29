@@ -1,0 +1,27 @@
+=================
+LintWrapper
+=================
+
+jslint is awesome ... but how do you best incorporate it into your
+environment? And how do you set it up so that your can gradually grow your
+huge js library into a prettfied javascript that is totally "lint" free?
+
+
+LintWrapper is an solution that we at patch.com are using to meet those
+goals. Limitations are that it uses Rhino to run ... this means that you have
+to have to load up your JVM to run it ... but it does do some caching so it
+only checks files once and then rechecks them if there is a change.
+
+java -jar lib/external/js.jar bin/linter
+
+or better yet
+
+make lint
+
+then you can add configurations into the conf/settings.js file... this will be
+modularized further into the development of this tool.
+
+
+Any help or ideas are super welcome and appreciated.
+
+

@@ -1,27 +1,31 @@
-=================
-LintWrapper
-=================
+h1. LintWrapper
 
-jslint is awesome ... but how do you best incorporate it into your
-environment? And how do you set it up so that your can gradually grow your
-huge js library into a prettfied javascript that is totally "lint" free?
+jslint is awesome ... but what is the best way to incorporate it into your
+development environment? And how do you set it up so that your can gradually 
+grow your gigantic javascript library into a lintfree javascript. LintWrapper
+is how we are attempting to lint the codebase for patch.com. And I would like
+to extend this tool and see if any others out there have not found a suitable
+jslint solution that works for large code bases.
 
+h2. Here is the benefits of LintWrapper
 
-LintWrapper is an solution that we at patch.com are using to meet those
-goals. Limitations are that it uses Rhino to run ... this means that you have
+* exclusion (such as libs that are not yours)
+* forgiveness day ... only deal with files after a date
+* ignore some js lint rules (idea snagged from jquery)
+* caching ... no need to check a file that is unchanged
+
+Limitations are that it uses Rhino to run ... this means that you have
 to have to load up your JVM to run it ... but it does do some caching so it
 only checks files once and then rechecks them if there is a change.
 
-java -jar lib/external/js.jar bin/linter
+@java -jar lib/external/js.jar bin/linter@
 
 or better yet
 
-make lint
+@make lint@
 
 then you can add configurations into the conf/settings.js file... this will be
 modularized further into the development of this tool.
 
-
 Any help or ideas are super welcome and appreciated.
-
 

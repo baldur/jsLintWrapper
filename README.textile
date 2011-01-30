@@ -5,7 +5,12 @@ h2. How it works
 Well I am glad you asked ;) so currently if you want it without tinkering with 
 files paths and what not you should put into into the root of your project or
 somewhere where the js files are desendants. Loading dependencies relative to the
-location of this batch is something that I am working on currently.
+location of this batch is something that I am working on currently. Solution that
+currently works is to perhaps create your own makefile in the working directory 
+and reference jsLintWrapper in there:
+
+@lint:
+   java -jar ../jsLintWrapper/lib/external/js.jar ../jsLintWrapper/bin/linter@
 
 
 jslint is awesome ... but what is the best way to incorporate it into your

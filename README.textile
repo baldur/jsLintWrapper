@@ -12,6 +12,10 @@ and reference jsLintWrapper in there:
 @lint:
    java -jar ../jsLintWrapper/lib/external/js.jar ../jsLintWrapper/bin/linter@
 
+h2. Settings
+There are number of options you can control in settings currently you need to
+set a file in conf/settings.js
+
 
 jslint is awesome ... but what is the best way to incorporate it into your
 development environment? And how do you set it up so that your can gradually 

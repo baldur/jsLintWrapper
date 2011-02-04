@@ -6,7 +6,16 @@ load( path + 'lib/external/jslint.js' );
 load( path + 'src/Returner.js' );
 load( path + 'src/jsFile.js' );
 load( path + 'src/jsLintWrapper.js' );
-load( path + 'conf/settings.js' );
+
+CONF = {};
+CONF.SETTINGS = eval( readFile( 'conf/settings.js' ) );
+
+if(CONF.SETTINGS) {
+  print('Using user settings');
+} else {
+  print('loading precooked settings');
+  load( path + 'conf/settings.js' );
+}
 
 jsLintWrapper.main( eval(arguments[0]) );
 

@@ -32,8 +32,8 @@ var jsLintWrapper = (function () {
             }
 
             Returner.collect( "\n Files that are ignored in settings" );
-            for( var key in SETTINGS.ignore ) {
-                Returner.collect( "\t\treason: ", SETTINGS.ignore[ key ], "file: ", key );
+            for( var key in CONF.SETTINGS.ignore ) {
+                Returner.collect( "\t\treason: ", CONF.SETTINGS.ignore[ key ], "file: ", key );
             }
         };
 
@@ -62,8 +62,8 @@ var jsLintWrapper = (function () {
 
         var rules = function( file ) {
             if( file.isDirectory() ) {
-                return !( SETTINGS.ignoreDirs[ file.getName() ] || 
-                          SETTINGS.ignoreDirs[ file ] );
+                return !( CONF.SETTINGS.ignoreDirs[ file.getName() ] || 
+                          CONF.SETTINGS.ignoreDirs[ file ] );
             }
             else {
                 return ( /\.js$/.test( file ) );
@@ -87,7 +87,7 @@ var jsLintWrapper = (function () {
             var files = pathObject.listFiles( jsFilter );
 
             for( var index in files ) {
-                var forgiveOlderThan = SETTINGS.forgiveOlderThan;
+                var forgiveOlderThan = CONF.SETTINGS.forgiveOlderThan;
                 var fileLastModified = new Date(files[index].lastModified());
                 path = dir + "/";
                 filepath = path + files[index].getName();

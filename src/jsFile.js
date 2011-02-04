@@ -46,9 +46,9 @@ var jsFile = function( path ) {
 
     var self = {
         ignore : function() {
-            if( typeof SETTINGS === "undefined" ) {
+            if( typeof CONF.SETTINGS === "undefined" ) {
             }
-            return SETTINGS.ignore[ self.getPath() ];
+            return CONF.SETTINGS.ignore[ self.getPath() ];
         },
         getPath : function() {
             return filePath;
@@ -69,7 +69,7 @@ var jsFile = function( path ) {
                 for ( var i = 0; i < e.length; i++ ) {
                         w = e[i];
 
-                        if ( !SETTINGS.okErrors[ w.reason ] ) {
+                        if ( !CONF.SETTINGS.okErrors[ w.reason ] ) {
                                 found++;
                                 message += "\n\tREASON:" + w.reason     + "\n";
                                 message += "\t\t" + "\n" + w.evidence + "\n";

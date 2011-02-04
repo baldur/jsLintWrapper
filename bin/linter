@@ -1,9 +1,10 @@
-load( 'lib/external/json2.js' );
-load( 'lib/external/jslint.js' );
-load( 'src/Returner.js' );
-load( 'src/jsFile.js' );
-load( 'src/jsLintWrapper.js' );
-load( 'conf/settings.js' );
+var path = environment['java.class.path'].replace('lib/external/js.jar','');
+load( path + 'lib/external/json2.js' );
+load( path + 'lib/external/jslint.js' );
+load( path + 'src/Returner.js' );
+load( path + 'src/jsFile.js' );
+load( path + 'src/jsLintWrapper.js' );
+load( path + 'conf/settings.js' );
 
 jsLintWrapper.main( eval(arguments[0]) );
 

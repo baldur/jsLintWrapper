@@ -1,4 +1,6 @@
+// this is a goofy way of detecting the library relative path
 var path = environment['java.class.path'].replace('lib/external/js.jar','');
+
 load( path + 'lib/external/json2.js' );
 load( path + 'lib/external/jslint.js' );
 load( path + 'src/Returner.js' );

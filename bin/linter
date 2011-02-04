@@ -8,7 +8,10 @@ load( path + 'src/jsFile.js' );
 load( path + 'src/jsLintWrapper.js' );
 
 CONF = {};
-CONF.SETTINGS = eval( readFile( 'conf/settings.js' ) );
+
+eval(arguments[0]);
+
+CONF.SETTINGS = eval( readFile( commandlineOptions.configFile ) );
 
 if(CONF.SETTINGS) {
   print('Using user settings');

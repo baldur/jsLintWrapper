@@ -13,8 +13,19 @@ and reference jsLintWrapper in there:
    java -jar ../jsLintWrapper/lib/external/js.jar ../jsLintWrapper/bin/linter@
 
 h2. Settings
-There are number of options you can control in settings currently you need to
-set a file in conf/settings.js
+There are couple of ways to specify different options such as a you individual
+settings file
+
+all of these settings can be attached as a json object in the command line
+
+to specify relative settings file
+@ "commandlineOptions={configFile: 'conf/setting.js'}" @
+
+to run on a single file only
+@ "commandlineOptions={configFile: 'conf/settings.js', :singleFile: 'one/file/of/javascript.js'} @
+
+Probably best to add to your local rake/make/ant or what ever automation
+options you use currently
 
 
 jslint is awesome ... but what is the best way to incorporate it into your

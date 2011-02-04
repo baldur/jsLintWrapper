@@ -130,7 +130,7 @@ var jsLintWrapper = (function () {
 
                 Returner.print();
 
-                if( !commandlineOptions.verbose && jsLintWraper.failedcount > 0 ) {
+                if( !commandlineOptions.verbose && jsLintWrapper.failedcount > 0 ) {
                     java.lang.System.exit(1);
                 }
 
